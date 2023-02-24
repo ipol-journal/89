@@ -19,7 +19,7 @@ if (sizeX, sizeY) != cropsize:
     (x0, y0) = (int(math.floor((sizeX - cropsize[0])/2)),
         int(math.floor((sizeY - cropsize[1])/2)))
     img.crop((x0, y0, x0 + cropsize[0], y0 + cropsize[1]))
-    img.save('input_0_sel.png')
+    img.save('input_0.png')
 
 
 # Run chanvese
@@ -31,7 +31,7 @@ subprocess.run(['chanvese',
 zoomfactor = int(max(2,math.floor(600.0/max(cropsize[0],cropsize[1]))))
 (sizeX, sizeY) = (zoomfactor*cropsize[0], zoomfactor*cropsize[1])
 
-for filename in ['input_0_sel', 'segmentation']:
+for filename in ['input_0', 'segmentation']:
     im = PIL.Image.open(filename + '.png')
     im.resize((sizeX, sizeY), method='nearest')
     im.save(filename + '_zoom.png')
