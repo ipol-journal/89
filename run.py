@@ -33,5 +33,5 @@ zoomfactor = int(max(2,math.floor(600.0/max(cropsize[0],cropsize[1]))))
 
 for filename in ['input_0', 'segmentation']:
     im = PIL.Image.open(filename + '.png')
-    im.resize((sizeX, sizeY), method='nearest')
+    im.resize((sizeX, sizeY))
     im.save(filename + '_zoom.png')
