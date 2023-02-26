@@ -26,7 +26,7 @@ if (sizeX, sizeY) != cropsize:
 subprocess.run(['chanvese', 
         'mu:' + str(args.mu),
         'tol:-1', 'maxiter:100', 'iterperframe:5',
-        'input_0_sel.png', 'evolution.gif', 'segmentation.png'])
+        'input_0.png', 'evolution.gif', 'segmentation.png'])
 
 zoomfactor = int(max(2,math.floor(600.0/max(cropsize[0],cropsize[1]))))
 (sizeX, sizeY) = (zoomfactor*cropsize[0], zoomfactor*cropsize[1])
