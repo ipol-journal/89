@@ -18,8 +18,8 @@ cropsize = (min(sizeX, 450), min(sizeY, 450))
 if (sizeX, sizeY) != cropsize:
     (x0, y0) = (int(math.floor((sizeX - cropsize[0])/2)),
         int(math.floor((sizeY - cropsize[1])/2)))
-    img.crop((x0, y0, x0 + cropsize[0], y0 + cropsize[1]))
-    img.save('input_0.png')
+    img_crop = img.crop((x0, y0, x0 + cropsize[0], y0 + cropsize[1]))
+    img_crop.save('input_0.png')
 
 
 # Run chanvese
